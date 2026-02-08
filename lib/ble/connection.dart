@@ -63,7 +63,7 @@ class BleConnection extends ChangeNotifier {
 
       BluetoothDevice? found;
       // Listen for scan results
-      await for (final results in FlutterBluePlus.onScanResults) {
+      await for (final results in FlutterBluePlus.scanResults) {
         for (final r in results) {
           if (r.device.platformName.startsWith(deviceNamePrefix)) {
             found = r.device;
